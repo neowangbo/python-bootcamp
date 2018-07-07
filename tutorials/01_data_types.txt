@@ -1,0 +1,22 @@
+python data types
+---
+int - integer, 3, 200
+float - Floating point, numbers with decimal point: 2.4 100.0
+str - Strings, "Hello world!"
+list - lists, ordered sequence of objects: [5,"Hello",19.8]
+dict - dictionaries, unordered key:value pairs: {"key-1":"value-1", "name":"Tom"}
+tup - tuples, ordered immutable sequence of objects: (10, "Hello", 200.4)
+set - Sets, unordered collection of unique objects: {"a","b"}
+bool - Booleans, logical value indicating True or False
+---
+Operators:
++ addition
+- subtration， minus
+* multiplication
+/ division
+% modulo, mod operator. it return back remainder of division
+---
+Pythn uses Dynamic Typing. (Differ from statically-typed). It means you can re-assign a differemt data type value to a variable. 
+
+
+

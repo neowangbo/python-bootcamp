@@ -1,0 +1,272 @@
+Statements
+
+#Flow control statement
+if #condition:
+    # do something
+elif #condition:
+    # do something
+else:
+    # do something
+
+#For loops
+Iterable, iterate over the object
+##Iterate a list
+>>> mylist = {1,2,3,4,"five"}
+>>> mylist
+{1, 2, 3, 4, 'five'}
+>>> for item in mylist:
+...     print(item)
+... 
+1
+2
+3
+4
+five
+>>> for item in mylist:
+...     print('Hello world')
+... 
+Hello world
+Hello world
+Hello world
+Hello world
+Hello world
+
+>>> mylist={0,1,2,3,4,5,6,7,8,9}
+>>> for num in mylist:
+...     if num % 2 == 0:
+...         print(f'event number: {num}')
+...     else:
+...         print(f'odd number: {num}')
+... 
+event number: 0
+odd number: 1
+event number: 2
+odd number: 3
+event number: 4
+odd number: 5
+event number: 6
+odd number: 7
+event number: 8
+odd number: 9
+
+
+##Iterate the characters in string
+>>> mystring = 'Hello World!'
+>>> for letter in mystring:
+...     print(letter)
+... 
+H
+e
+l
+l
+o
+ 
+W
+o
+r
+l
+d
+!
+
+
+##Iterate tuple
+>>> mytuple=(1,2,3,4,5,6,7,8,9,0)
+>>> mytuple
+(1, 2, 3, 4, 5, 6, 7, 8, 9, 0)
+>>> for item in mytuple:
+...     print(item)
+... 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+
+>>> mylist=[(1,2),(3,4),(5,6),(7,8),(9,0)]
+>>> for a,b in mylist:
+...     print(f'{a} - {b}')
+... 
+1 - 2
+3 - 4
+5 - 6
+7 - 8
+9 - 0
+
+##Iterate dictionary
+>>> mydict={'one':1,'two':2,'three':3,'four':4}
+>>> for item in mydict:
+...     print(item)
+... 
+one
+two
+three
+four
+>>> for item in mydict.items():
+...     print(item)
+... 
+('one', 1)
+('two', 2)
+('three', 3)
+('four', 4)
+>>> for key,val in mydict.items():
+...     print(f'key={key}, value={val}')
+... 
+key=one, value=1
+key=two, value=2
+key=three, value=3
+key=four, value=4
+>>> for key in mydict.keys():
+...     print(key)
+... 
+one
+two
+three
+four
+>>> for val in mydict.values():
+...     print(val)
+... 
+1
+2
+3
+4
+
+#While loop
+
+>>> x = 0
+>>> while x < 5:
+...     print(f'The current value of x is {x}')
+...     x += 1
+... 
+The current value of x is 0
+The current value of x is 1
+The current value of x is 2
+The current value of x is 3
+The current value of x is 4
+>>> x=0
+>>> while x < 5:
+...     print(f'The current value of x is {x}')
+...     x += 1
+... else:
+...     print('X is not less than 5')
+... 
+The current value of x is 0
+The current value of x is 1
+The current value of x is 2
+The current value of x is 3
+The current value of x is 4
+X is not less than 5
+
+### break, continue and pass
+break: Break out of current closest enclosing loop.
+continue: Goes to the top of the closest enclosing loop.
+pass: Does nothing at all.
+
+#Useful operators
+##range()
+>>> for num in range(5):
+...     print(num)
+... 
+0
+1
+2
+3
+4
+>>> for num in range(1,5):
+...     print(num)
+... 
+1
+2
+3
+4
+>>> for num in range(0,10,2):
+...     print(num)
+... 
+0
+2
+4
+6
+8
+>>> list(range(0,10,2))
+[0, 2, 4, 6, 8]
+##enumerate()
+>>> index_count=0
+>>> word='abcde'
+>>> for item in word:
+...     print('index {} letter is {}'.format(index_count,item))
+...     index_count += 1
+... 
+index 0 letter is a
+index 1 letter is b
+index 2 letter is c
+index 3 letter is d
+index 4 letter is e
+>>> for item in enumerate(word):
+...     print(item)
+... 
+(0, 'a')
+(1, 'b')
+(2, 'c')
+(3, 'd')
+(4, 'e')
+>>> for index,letter in enumerate(word):
+...     print('index {} letter is {}'.format(index,letter))
+... 
+index 0 letter is a
+index 1 letter is b
+index 2 letter is c
+index 3 letter is d
+index 4 letter is e
+##zip()
+>>> mylist1=[1,2,3,4,5]
+>>> mylist2=['a','b','c','d','e']
+>>> mylist3=[100,200,300,400,500]
+>>> for item in zip(mylist1,mylist2,mylist3):
+...     print(item)
+... 
+(1, 'a', 100)
+(2, 'b', 200)
+(3, 'c', 300)
+(4, 'd', 400)
+(5, 'e', 500)
+>>> mylist1=[1,2,3]
+>>> mylist2=[4,5,6]
+>>> print(zip(mylist1,mylist2))
+<zip object at 0x105519508>
+>>> list(zip(mylist1,mylist2))
+[(1, 4), (2, 5), (3, 6)]
+## in
+>>> 'x' in mylist1
+False
+## min(), max(), shuffle()
+>>> from random import shuffle
+>>> mylist=[1,2,3,4,5,6,]
+>>> shuffle(mylist)
+>>> mylist
+[4, 3, 1, 6, 2, 5]
+>>> from random import randint
+>>> randint(0,10000)
+##input()
+>>> result = input('What\'s your name?')
+What's your name?Wang Bo
+>>> result
+'Wang Bo'
+##type(), float() and int()
+
+# Understanding List
+>>> mylist=[x for x in 'Hello World']
+>>> mylist
+['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd']
+>>> mylist=[num**2 for num in range(0,10)]
+>>> mylist
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+>>> mylist=[num for num in range(0,10) if num % 2 == 0]
+>>> mylist
+[0, 2, 4, 6, 8]
+>>> results=[x if x%2==0 else 'ODD' for x in range(0,11)]
+>>> results
+[0, 'ODD', 2, 'ODD', 4, 'ODD', 6, 'ODD', 8, 'ODD', 10]

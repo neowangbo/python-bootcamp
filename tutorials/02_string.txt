@@ -1,0 +1,27 @@
+String
+---
+String is a group of sequenced characters. It can be presented with single quotes or double quotes.
+"Hello world!" equals to 'Hello world!'
+But it has single quote in your string, you have to use double quotes, like:
+"Hello's world!".
+
+H e l l o
+0 1 2 3 4
+
+String can be indexing and slicing.
+---
+Some methods related to string
+print('Hello')
+len("Hello")
+
+mystring = "Hello world"
+---
+String concatenation and multplication
++
+*
+10 String object build-in methods
+---
+string format and f-print
+float formatting follows "{value:width,precision f}"
+
+

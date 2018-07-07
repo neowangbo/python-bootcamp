@@ -1,3 +1,5 @@
+from IPython.display import clear_output
+
 class FiveInOneRaw:
 
     board = [' '] * 10;
@@ -16,6 +18,7 @@ class FiveInOneRaw:
             
     
     def displayBoard(self):
+        clear_output()
         print(f" {self.board[7]} | {self.board[8]} | {self.board[9]} ")
         print('---|---|---')
         print(f" {self.board[4]} | {self.board[5]} | {self.board[6]} ")
